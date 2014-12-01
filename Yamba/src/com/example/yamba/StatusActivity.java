@@ -50,7 +50,7 @@ public class StatusActivity extends Activity implements OnClickListener{
 		defaultTextColor = textCount.getTextColors().getDefaultColor();
 		
 		/** implement the textChangeListener to editStatus **/
-		editStatus.addTextChangedListener(new TextWatcher() {
+		editStatus.addTextChangedListener(new TextWatcher() { //innerclass example
 			
 			@Override
 			public void afterTextChanged(Editable s) {
@@ -60,7 +60,7 @@ public class StatusActivity extends Activity implements OnClickListener{
 				if(count < 10)
 					textCount.setTextColor(Color.RED);
 				else
-					textCount.setTextColor(defaultTextColor);
+					textCount.setTextColor(defaultTextColor); //default Color because it depends in the system and setting which is used
 				
 			}
 
@@ -108,7 +108,7 @@ public class StatusActivity extends Activity implements OnClickListener{
 	}
 	
 	/** implement threadlike class for yamba server communication features **/
-	private final class PostTask extends
+	private final class PostTask extends //class in class example
 		AsyncTask<String, Void, String>{
 
 		@Override
